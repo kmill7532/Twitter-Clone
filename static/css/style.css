@@ -1,0 +1,251 @@
+/* 
+Common
+*****************************/
+
+
+html,
+body {
+    height: 100%;
+    background-color: #2A8ABE;
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+.navbar{
+    background: #4AC3EC;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: 500;
+}
+
+
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    
+}
+
+#navbar__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    }
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    background: #EB760F;
+    background: -webkit-linear-gradient(to right, #fff,#4AC3EC, #2A8ABE, #4AC3EC, #fff);
+    background: linear-gradient(to right, #fff,#4AC3EC, #2A8ABE, #4AC3EC, #fff);
+    color: #000;
+    transition: all 0.3s ease;
+}    
+
+.navbar__links:hover {
+    color: #EB760F;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar__menu {
+        display: none;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+    }
+    .navbar__toggle {
+        display: block;
+    }
+    #mobile-menu {
+        width: 2vw;
+        height: 3vh;
+    }
+}
+
+.content {
+    max-width: 600px;
+    height: fit-content;
+    
+    margin: 0 auto;
+    border-left: 3px solid #EB760F;
+    border-right: 3px solid #EB760F;
+}
+
+/* 
+Post
+*****************************/
+.post_form {
+    padding: 20px 40px;
+    border-bottom: 3px solid #EB760F;
+    border-top: 3px solid #EB760F;
+}
+
+.post_form input {
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.post_form textarea {
+    width: 70%;   
+    padding: 10px;
+    border: 2px solid #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+#btn {
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #EB760F;
+    background: -webkit-linear-gradient(to right, #fff,#4AC3EC, #2A8ABE, #4AC3EC, #fff);
+    background: linear-gradient(to right, #fff,#4AC3EC, #2A8ABE, #4AC3EC, #fff);
+    color: #000;
+    font-size: 1.1rem;
+    
+    transition: all 0.3s;
+    border-radius: 5px;
+    border: 0px;
+    position: center;
+    text-align: center;
+}
+
+.posts ul {
+    padding: 0;
+}
+.posts li {
+    display: flex;
+    border-bottom: 2px solid #EB760F;
+    padding: 15px;
+    list-style: none;
+    position: relative;
+    color: #fff;
+    }
+
+.posts li .menu_icon {
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+
+.posts li .menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 2px solid #EB760F;
+    background-color: #4AC3EC;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.posts li .menu a {
+    text-decoration: none;
+}
+.posts li .logo {
+    flex-basis: 15%;
+}
+
+.posts li .logo img {
+    width: 70%;
+}
+
+.posts li .name_body {
+    flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+    font-weight: bolder;
+}
+
+.posts li .name_body .datetime {
+    color: #fff;
+    font-weight: lighter;
+}
+
+@media  screen and (max-width: 500px) {
+    .posts li .name_body .name {
+        font-size: 20px;
+    }
+    
+}
+.postimage{
+    width: 100%;
+}
